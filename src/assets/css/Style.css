@@ -1,46 +1,54 @@
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Times New Roman', Times, serif;
-  line-height: 1.6;
-  color: #212529;
-  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
-.nav-link {
-  color: #000 !important;
+/* Navbar Section*/
+
+.Header{
+  align-items: center;
+  background-color: #FDFBFB;
+  background: fixed;
+  top: 0;
 }
 
-.nav-link:hover {
-  color: blue !important;
+.Header-link{
+  display: flex;
+  gap: 20px;
+} 
+
+.nav-img{
+  height: 60px;
 }
 
-  .button {
-  background-color: #5755D7 !important;
-  border: none;
-  color: aliceblue;
-  padding: 13px 47px;
-  margin: 0 0 0 40px;
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-    background-color: #b02a37;
-    color: #fff;
+@media (min-width: 200px) and (max-width: 991.98px) { 
+  .nav-img{
+    height: 50px;
+    padding-left: 20px;
   }
+ }
+
+/* Footer Section */
+
+.footer-link{
+  align-items: center;
+  display: flex;
+  font-size: large;
+}
+
+/*Banner Section*/
 
 .baner img{
   height: 100vh;
- min-width: 100%; 
+  width: 100%;
   object-fit: cover;
-  object-position: center;
+  /* height: 700px!important; */
+  background-size: cover!important;
 }
 
-
+/* Banner overlay text centered */
 .baner{
   position: relative;
   display: block;
@@ -54,7 +62,7 @@ body {
   transform: translate(-50%, -50%);
   color: #fff;
   z-index: 2;
-  /* padding: 0 1rem; */
+  padding: 0 1rem;
 }
 
 .baner::after{
@@ -65,50 +73,36 @@ body {
   z-index: 1;
 }
 
-.baner, .planing, .courses,
- .btn{
-  background-color: #F09F1A;
-  border: none;
-  border-radius: 0;
+.btn1{
+  background: #6f42c1;
   color: #fff;
-  padding: 10px 20px;
-  transition: all 0.3s ease;
-}
-.baner, .populartopic .topcourses,.courses .btn:hover {
-    background-color: #b02a37;
-    color: #fff;
-
-  }
-.populartopic .btn{
-  background-color: #F09F1A;
   border: none;
-  border-radius: 0;
-  color: #fff;
-  transition: all 0.3s ease;
-} 
-.populartopic .btn:hover {
-    background-color: #b02a37;
-    color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
 
-  }
-  .review{
-    border-top: solid 2px #5755D7 ;
-    border-bottom: solid 2px #F09F1A ;
-  }
-.footer {
-  background-color: #212529;
-  padding:  80px 0;
-  text-align: center;
+.btn1:hover{
+  background: #5a32a8;
+}
 
+/*Popular Topic*/
+
+.TopicData{
+   background-color: #173156;
 }
-.footer a {
- text-decoration: none;
-  color: #FAF0F0
+
+@media (min-width: 992px) {
+  .col-lg-2-4 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
 }
-.footer a:hover {
-  color: #F09F1A;
-  text-decoration: none;
+
+.review{
+  border-top : 2px solid #5a32a8;
+  border-bottom : 2px solid #FD9F1A;
+  
 }
-.footer-links{
- padding: 7px 8px;
-}
+

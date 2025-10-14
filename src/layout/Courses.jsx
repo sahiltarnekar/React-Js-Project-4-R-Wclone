@@ -9,9 +9,9 @@ export const Courses = () => {
     <div className="mb-4 text-center">
       <h2 className="fw-light">Pick A Course To Get Started</h2>
     </div>
-    <div className="row g-4">
+    <div className="course row g-4 justify-content-center mx-auto ">
       {CoursesData.map(item => (
-        <div className="col-12 col-md-6 col-lg-3" key={item.id}>
+        <div className="col-md-6 col-lg-4 col-xxl-3" key={item.id}>
           <CoursesDataItem item={item} />
         </div>
       ))}

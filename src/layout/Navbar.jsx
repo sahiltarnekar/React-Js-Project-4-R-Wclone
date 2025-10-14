@@ -1,49 +1,63 @@
 import React from "react";
-import "../assets/css/style.css";
-import { IoCartOutline } from "react-icons/io5";
-function Navbar() {
+import { FaCartShopping } from "react-icons/fa6";
+import NumberLogo  from "../assets/images/logo.png";
+const Navbar = () => {
   return (
-    <nav
-      className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 fixed-top"
-      style={{ zIndex: 1030 }}
-    >
-      <div className="container">
-        <a className="navbar-brand" href="#">
-          <img
-            src="/src/assets/images/logo.png"
-            alt="Red & White Logo"
-            height="50"
-          />
-        </a>
+    <>
+      <nav className="navbar navbar-expand-lg bg-white shadow-sm py-3 Header">
+        <div className="container">
+          <a
+            className="navbar-brand d-flex flex-column align-items-start"
+            href="#"
+          >
+            <img src={NumberLogo} alt="logo"  className="nav-img"/>
+          </a>
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+          <div className="d-flex align-items-center">
+            <button
+              className="navbar-toggler border-0"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+          </div>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 align-items-center">
-            <li className="nav-item">
-              <a className="nav-link" href="#">Courses</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Membership</a>
-            </li>
-            <li className="nav-item" style={{ fontSize: "1.5rem" } }> 
-              <IoCartOutline />
-            </li>
-            <li className="nav-item">
-              <a className="btn button btn-inline" href="#">Login</a>
-            </li>
-          </ul>
+          <div
+            className="collapse navbar-collapse justify-content-end text-center mt-3 mt-lg-0"
+            id="navbarNav"
+          >
+            <ul className="navbar-nav ms-auto Header-link">
+              <li className="nav-item">
+                <a className="nav-link fw-semibold text-dark" href="#">
+                  Courses
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link fw-semibold text-dark" href="#">
+                  Membership
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link fw-semibold text-dark" href="#">
+                  <FaCartShopping/>
+                </a>
+              </li>
+              <li className="nav-item">
+                <button className="btn btn-primary px-4 fw-bold mt-2 mt-lg-0">
+                  Login
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
-}
+};
 
 export default Navbar;

@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "../layout/Navbar";
-import Baner from "../layout/Baner";
+import Banner from "../layout/Banner";
 import Footer from "../layout/Footer";
 import Studybanner from "../layout/Studybanner";
-import Topcourses from "../layout/Topcourses";
+import TopCourses from "../layout/Topcourses";
 import Populartopic from "../layout/Populartopic";
 import Planing from "../layout/Planing";
 import Courses from "../layout/Courses";
@@ -13,9 +13,9 @@ function Home() {
   return (
     <>
   <Navbar />
-  <Baner />
+  <Banner />
   <Studybanner />
-  <Topcourses />
+  <TopCourses />
   <Populartopic />
   <Planing />
   <Courses />

@@ -19,39 +19,44 @@ export const StudyItem = ({ item }) => {
   )
 }
 
-
-
-
-export const TopcoursesItem = ({ item }) => {
-  return (
-   <div className="card shadow-0 " style={{ border:"none"}}>"
-  <img src={item.img} style={{ width:"300px", height:"180px", objectFit:"cover"}} className="card-img-top " alt={item.title} />
-  <div className="card-body ">
-    <h4 className="card-title lh-sm fw-normal">{item.title}</h4>
-    <div className="mb-2 d-flex align-items-center text-muted gap-1">
-      <span className="card-title fw-normal">{item.rating}</span>
+export const TopcoursesItem = ({ item }) => (
+      <div className="card p-3 border-0">
+        <div className="card-body">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  width="300px"
+                  height="180px"
+                  className="object-fit-cover align-center"
+                />
+                <div className="mt-3 ">
+                  <h4 style={{ fontSize: "18px" }}>{item.title}</h4>
+                  <p className="mb-1">
+                   <span className="card-title fw-normal">{item.rating}</span>
       <span  className="card-title d-inline" style={{color: "#f7b731"}}>
         {item.ratingicon}
       </span>
-      <span className="text-muted"> ({item.students}) </span>
-    </div>
-    <h5 className="fw-normal  ">{item.price}</h5>
-  </div>
-</div>
-  )
-}
+                    <span className="text-muted mb-1">({item.students})</span>
+                  </p>
+                  <p className="fw-light" style={{ fontSize: "15px" }}>
+                    {item.price}
+                  </p>
+                </div>
+                </div>  
+                </div>
+);
 
 
-
-   export const PopulartopicItem = ({ item }) => {
+export const PopulartopicItem = ({ item }) => {
   return (
-    <div className="card text-center border-0 shadow-none" style={{backgroundColor: "#f8f9fa"}}>
-      <div className="card-body py-4">
-        {item.title}
-      </div>
+    <div
+      className="card text-center border-0 shadow-sm"
+      style={{ backgroundColor: "#f8f9fa" }}
+    >
+      <div className="card-body py-4">{item.title}</div>
     </div>
-  )
-}
+  );
+};
 
   export const PlaningItem = ({ item }) => {
   return (
@@ -66,20 +71,30 @@ export const TopcoursesItem = ({ item }) => {
 }
   export const CoursesDataItem = ({ item }) => {
   return (
-     <div className="card shadow-0 " style={{ border:"none"}}>
-  <img src={item.img} style={{ width:"300px", height:"180px", objectFit:"cover"}} className="card-img-top " alt={item.title} />
-  <div className="card-body ">
-    <h4 className="card-title lh-sm fw-normal">{item.title}</h4>
-    <div className="mb-2 d-flex align-items-center text-muted gap-1">
-      <span className="card-title fw-normal">{item.rating}</span>
+  <div className="card p-3 border-0">
+    <div className="card-body">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  width="300px"
+                  height="180px"
+                  className="object-fit-cover lazy"
+                />
+                <div className="mt-3 ">
+                  <h4 style={{ fontSize: "18px" }}>{item.title}</h4>
+                  <p className="mb-1">
+                   <span className="card-title fw-normal">{item.rating}</span>
       <span  className="card-title d-inline" style={{color: "#f7b731"}}>
         {item.ratingicon}
       </span>
-      <span className="text-muted"> ({item.students}) </span>
-    </div>
-    <h5 className="fw-normal  ">{item.price}</h5>
-  </div>
-</div>
+                    <span className="text-muted mb-1">({item.students})</span>
+                  </p>
+                  <p className="fw-light" style={{ fontSize: "15px" }}>
+                    {item.price}
+                  </p>
+                </div>
+                </div> 
+                </div>
   
   )}
 
